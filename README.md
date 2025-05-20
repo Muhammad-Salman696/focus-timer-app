@@ -1,28 +1,69 @@
-# ⏳ Focus Timer App
+# 🎯 Focus Timer App
 
-The Focus Timer App is a productivity tool built using React. It helps you manage focused work sessions and breaks using a simple, clean timer interface inspired by the Pomodoro Technique.
+A customizable Pomodoro-style **Focus Timer App** built with **React** to help users stay productive through structured work and break cycles.
+
+---
 
 ## 🚀 Features
 
-- ⏱ Start, pause, and reset the focus timer
-- 🔁 Easy to use and responsive interface
-- 💡 Helps boost productivity and concentration
+- ⏱️ Set custom **work durations**
+- ☕ Define your **break durations**
+- 🔁 Choose the **number of focus/break cycles**
+- 🔔 Countdown sound alert near the end
+- 🧘 Auto-switch between **work** and **break** periods
+- ✅ Reset functionality to clear session
 
-## 📸 Screenshots
-
-> (Add screenshots here if available)
+---
 
 ## 🛠️ Tech Stack
 
-- **React** (Create React App)
-- **CSS** (with optional Bootstrap if used)
+- React (functional components + hooks)
+- Plain CSS + Bootstrap classes (optional)
+- HTML5 Audio API for sound alerts
+
+---
+
+## 🧠 How It Works
+
+1. Input your:
+   - Focus session duration (in minutes)
+   - Break duration (in minutes)
+   - Number of total periods
+2. Hit **Set Timer**
+3. Click **Start** to begin the countdown
+4. The timer switches automatically between work and break sessions
+5. Use **Pause**, **Resume**, or **Reset** any time
+
+---
+
+## 📁 Folder Structure
+
+/public
+└── sound.mp3 # Countdown audio
+/src
+├── App.js # Main app logic and UI
+└── App.css # Styles for timer
+
+---
 
 ## 📦 Getting Started
 
-To run the project locally:
+To run this project locally:
 
 ```bash
-git clone https://github.com/your-username/focus-timer-app.git
-cd focus-timer-app
+git clone https://github.com/Muhammad-Salman696/focus-timer-app
+cd focus-timer
 npm install
 npm start
+🔮 Future Improvements
+⏳ Progress bar or circular timer animation
+
+🔊 Toggle sound on/off
+
+📈 Show completed session stats
+
+🌙 Dark mode toggle
+
+🧑‍💻 Author
+    Muhammad Salman
+    React & Frontend Enthusiast

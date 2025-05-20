@@ -2,6 +2,24 @@
   text-align: center;
   margin-top: 50px;
 }
+.user-timer{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.main-div{
+  display: grid;
+  place-items: center; /* Centers child elements */
+}
+.shadow-div{ 
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1),
+             -8px -8px 15px rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  background: #f0f0f0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  width: 400px;
+}
 
 .timer-display {
   font-size: 3rem;
@@ -21,4 +39,34 @@
 
 .timer-controls button:hover {
   background-color: #45a049;
+}
+
+.setTimerBtn{
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+.setTimerBtn:hover{
+  background-color: #45a049;
+}
+
+.input-basic {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+  transition: all 0.3s ease;
+}
+
+.input-basic:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
 }
