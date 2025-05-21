@@ -11,6 +11,8 @@ const Timer = () => {
   const [totalPeriods, setTotalPeriods] = useState('');
   const [currentPeriod, setCurrentPeriod] = useState(1);
   const [isBreak, setIsBreak] = useState(false); // To track whether it's break or work
+  const [darkMode, setDarkMode] = useState(false); //For dark mode toggle
+
 
   const alarmRef = useRef(null);
 
@@ -106,9 +108,14 @@ const Timer = () => {
     return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
   };
 
+  // Dark mode
+  const toggleDarkMode = () => {
+  setDarkMode(prev => !prev);
+  };
+
   return (
     <>
-    <div className='main-div'>
+    <div className={`main-div ${darkMode ? 'dark' : ''}`}>
       <div className='shadow-div user-timer'>
 
         {/* Timer duration */}
@@ -148,24 +155,29 @@ const Timer = () => {
       </div>
     
 
-    <div className="shadow-div timer">
-      <h2>Focus Timer</h2>
-      <div className="timer-display">{formatTime(seconds)}</div>
-      <div className="timer-controls">
-        {!isActive && !isPaused ? (
-          <button onClick={startTimer}>Start</button>
-        ) : isPaused ? (
-          <button onClick={startTimer}>Resume</button>
-        ) : (
-          <button onClick={pauseTimer}>Pause</button>
-        )}
-        <button onClick={resetTimer}>Reset</button>
-      </div>
+     <div className="shadow-div timer">
+        <h2>Focus Timer</h2>
+        <div className="timer-display">{formatTime(seconds)}</div>
+        <div className="timer-controls">
+          {!isActive && !isPaused ? (
+            <button onClick={startTimer}>Start</button>
+          ) : isPaused ? (
+            <button onClick={startTimer}>Resume</button>
+          ) : (
+            <button onClick={pauseTimer}>Pause</button>
+          )}
+          <button onClick={resetTimer}>Reset</button>
+        </div>
     </div>
+      <button onClick={toggleDarkMode} className="dark-toggle-btn">
+        {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
+      </button>
+
+
 
     {/* Audio element */}
     <audio ref={alarmRef} src="/sound.mp3" loop /> 
-    </div>
+  </div>
     
     </>
   );
